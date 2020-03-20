@@ -1,2 +1,2 @@
-# PCAxis.Menu.SybaseDatamodelMenu
-DatamodelMenu implementation for usage with Sybase
+# PCAxis.Menu.OracleDatamodelMenu
+DatamodelMenu implementation for usage with Oracle
