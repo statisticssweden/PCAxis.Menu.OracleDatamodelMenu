@@ -14,7 +14,7 @@ namespace PCAxis.Menu.Implementations
 	/// </summary>
 	public class OracleDatamodelMenu : DatamodelMenu
 	{
-		private log4net.ILog log = log4net.LogManager.GetLogger("PCAxis.Menu.Implementations.OracleDatamodelMenu");
+		private log4net.ILog log = log4net.LogManager.GetLogger("PCAxis.Menu.OracleDatamodelMenu", "OracleDatamodelMenu");
 
 		private string connectionString;
 
