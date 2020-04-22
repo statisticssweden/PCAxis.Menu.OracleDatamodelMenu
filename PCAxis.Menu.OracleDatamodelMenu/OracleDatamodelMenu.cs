@@ -14,7 +14,7 @@ namespace PCAxis.Menu.Implementations
 	/// </summary>
 	public class OracleDatamodelMenu : DatamodelMenu
 	{
-		private log4net.ILog log = log4net.LogManager.GetLogger("PCAxis.Menu.OracleDatamodelMenu", "OracleDatamodelMenu");
+		private static readonly log4net.ILog log = log4net.LogManager.GetLogger(typeof(OracleDatamodelMenu));
 
 		private string connectionString;
 
@@ -58,8 +58,14 @@ namespace PCAxis.Menu.Implementations
 				command.Parameters.Add("levels", OracleDbType.Int32, parameters["levels"].Size, numberOfLevels, ParameterDirection.Input);
 				command.Parameters.Add("menu", OracleDbType.Varchar2, parameters["menu"].Size, menu, ParameterDirection.Input);
 				command.Parameters.Add("selection", OracleDbType.Varchar2, parameters["selection"].Size, selection, ParameterDirection.Input);
-
-				new OracleDataAdapter(command).Fill(dataTable);
+				try
+				{
+					new OracleDataAdapter(command).Fill(dataTable);
+				}
+				catch (OracleException e)
+				{
+					log.Error(e);
+				}
 			}
 
 			return dataTable;
