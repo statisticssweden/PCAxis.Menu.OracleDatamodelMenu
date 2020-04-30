@@ -33,6 +33,7 @@ namespace PCAxis.Menu.Implementations
 					((OracleDatamodelMenu)m).connectionString = connectionString;
 
 					m.AddSqlHints(SqlHint.UseConnectByPrior);
+					m.AddSqlHints(SqlHint.UseExtraSelect);
 
 					if (initializationFunction != null)
 						initializationFunction(m);
