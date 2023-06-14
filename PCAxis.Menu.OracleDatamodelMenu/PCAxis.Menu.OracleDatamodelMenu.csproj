@@ -16,17 +16,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="log4net" Version="2.0.12" />
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0">
+    <PackageReference Include="log4net" Version="2.0.15" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="MinVer" Version="2.5.0">
+    <PackageReference Include="MinVer" Version="4.3.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="2.19.60" />
-    <PackageReference Include="PCAxis.Menu" Version="1.0.1" />
+    <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="2.19.190" />
+    <PackageReference Include="PCAxis.Menu" Version="1.0.2" />
   </ItemGroup>
 
   <ItemGroup>
